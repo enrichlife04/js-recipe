@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>こーいちクイズ👏👏👏👏</h1>
+    <h2>僕はGeekSalonメンターです。何メンターだと思いますか？？？</h2>
+    <div>
+      <button id="web-button">🔴Webメンター🖥</button>
+      <button id="iPhone-button">🟡iPhoneメンター📱</button>
+      <button id="Game-button">🔵Gameメンター🎮</button>
+    </div>
+
+    <div id="display">答えはこちら！！</div>
+
+    <script>
+      //ここはJsの世界
+      const web = document.getElementById("web-button")
+      const iPhone = document.getElementById("iPhone-button")
+      const game = document.getElementById("Game-button")
+      const display = document.getElementById("display")
+
+      web.onclick = function() {
+        alert("ざんねんぴええええええええん")
+        display.textContent =
+          "残念〜〜ちゃいます😂 でも移籍しろってよく誘われるw"
+      }
+
+      iPhone.onclick = function() {
+        alert("👼👼👼👼👼👼👼正解👼👼👼👼👼👼👼👼")
+        display.textContent =
+          "大正解！！！！お見事！！iPhoneコースが一番楽しいよ（主観）"
+      }
+
+      game.onclick = function() {
+        alert("ざんねんぴええええええええん")
+        display.textContent = "残念〜〜ちゃいます😂 Unityのセンスがなかった👶"
+      }
+    </script>
+  </body>
+</html>

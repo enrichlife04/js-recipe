@@ -1,3 +1,5 @@
+/* eslint-disable no-const-assign */
+/* eslint-disable no-unused-vars */
 // * let キーワードを使って、hensu という名前の変数を宣言する
 let hensu
 
