@@ -58,5 +58,40 @@
         },
       })
     </script>
+
+    <!-- 3. 売り切れ状態を表示する１ (v-if v-elseについて) -->
+    <section id="app3">
+      <h3>売り切れ状態を表示する１</h3>
+
+      <div>
+        <div>{{ drink.name }}（{{ drink.stock }}）</div>
+        <button v-on:click="kau">{{ drink.price }}円</button>
+        <div>{{ kattaKazu }}本買いました</div>
+        <div v-if="drink.stock > 0">在庫あり</div>
+        <div v-else>売り切れ</div>
+      </div>
+    </section>
+
+    <script>
+      new Vue({
+        el: "#app3",
+        data: {
+          drink: {
+            name: "お茶", // 名前
+            price: 120, // 値段
+            stock: 3, // 在庫数
+          },
+          kattaKazu: 0,
+        },
+        methods: {
+          kau: function() {
+            if (this.drink.stock > 0) {
+              this.drink.stock -= 1
+              this.kattaKazu += 1
+            }
+          },
+        },
+      })
+    </script>
   </body>
 </html>
